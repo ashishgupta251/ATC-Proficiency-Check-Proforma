@@ -1,0 +1,112 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    ```
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AAI Proficiency Check Management System</title>
+
+    <link rel="stylesheet" href="css/common.css" />
+    ```
+  </head>
+
+  <body>
+    ```
+    <!-- TOP BAR -->
+
+    <div class="topbar">
+      <div id="welcomeUser">Welcome User</div>
+
+      <button id="logoutBtn">Logout</button>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+
+    <div class="container">
+      <div class="header">
+        <img src="assets/bglogo.png" alt="AAI Logo" class="logo" />
+
+        <h1>Airports Authority of India</h1>
+
+        <h2>ATC Proficiency Check Management System</h2>
+      </div>
+
+      <!-- FORM CARDS -->
+
+      <div class="forms-grid">
+        <div class="form-card" onclick="location.href = 'forms/adc.html'">
+          <h3>Form 27</h3>
+
+          <p>ADC</p>
+        </div>
+
+        <div class="form-card" onclick="location.href = 'forms/adc-appp.html'">
+          <h3>Form 28</h3>
+
+          <p>ADC-APP(P)</p>
+        </div>
+
+        <div class="form-card" onclick="location.href = 'forms/appp.html'">
+          <h3>Form 29</h3>
+
+          <p>APP(P)</p>
+        </div>
+
+        <div class="form-card" onclick="location.href = 'forms/apps.html'">
+          <h3>Form 30</h3>
+
+          <p>APP(S)</p>
+        </div>
+
+        <div class="form-card" onclick="location.href = 'forms/appp-apps.html'">
+          <h3>Form 31</h3>
+
+          <p>APP(P)-APP(S)</p>
+        </div>
+
+        <div class="form-card" onclick="location.href = 'forms/accp-occ.html'">
+          <h3>Form 32</h3>
+
+          <p>ACC(P)/OCC</p>
+        </div>
+
+        <div class="form-card" onclick="location.href = 'forms/accs.html'">
+          <h3>Form 33</h3>
+
+          <p>ACC(S)</p>
+        </div>
+
+        <div class="form-card" onclick="location.href = 'forms/accp-accs.html'">
+          <h3>Form 34</h3>
+
+          <p>ACC(P)-ACC(S)</p>
+        </div>
+      </div>
+
+      <div class="footer">Jaipur International Airport</div>
+    </div>
+    ```
+
+    <script>
+      const user = JSON.parse(sessionStorage.getItem("user"));
+
+      if (!user) {
+        location.href = "index.html";
+      }
+
+      document.getElementById("welcomeUser").innerText =
+        `Welcome, ${user.name}`;
+
+      document
+        .getElementById("logoutBtn")
+        .addEventListener("click", function () {
+          sessionStorage.clear();
+
+          location.href = "index.html";
+        });
+    </script>
+  </body>
+</html>
