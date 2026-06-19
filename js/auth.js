@@ -9,14 +9,11 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
   if (!user) {
     alert("Invalid ID or Password");
+
     return;
   }
 
   sessionStorage.setItem("user", JSON.stringify(user));
 
-  if (user.role === "admin") {
-    location.href = "admin-dashboard.html";
-  } else {
-    location.href = "dashboard.html";
-  }
+  location.href = "dashboard.html";
 });
