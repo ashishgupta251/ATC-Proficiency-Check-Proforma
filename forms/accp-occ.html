@@ -1,0 +1,1738 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form 32 - AREA CONTROL PROCEDURAL/OCEANIC CONTROL</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/form.css" />
+  </head>
+  <body>
+    <datalist id="employeeList"></datalist>
+
+    <form id="proficiencyForm">
+      <div class="a4-page">
+        <div class="header-top">
+          <div class="header-left">
+            <img
+              src="../assets/logo.png"
+              alt="AAI Logo"
+              onerror="this.style.display = 'none'"
+            />
+            <h1>
+              भारतीय विमानपत्तन प्राधिकरण<br />AIRPORTS AUTHORITY OF INDIA
+            </h1>
+          </div>
+          <div class="header-right">Form: CAP-04/024(Rev.3)</div>
+        </div>
+
+        <div class="form-title-block">
+          <div class="title-main">Proficiency Check Proforma</div>
+          <div class="title-sub">
+            (To be printed either on an A3 sheet in the booklet form or on both
+            sides on A4 sheets pasted together on the<br />longer edge. Not to
+            be used in single side print and lose/stapled sheets)
+          </div>
+          <div class="title-unit">AREA CONTROL PROCEDURAL/OCEANIC CONTROL</div>
+        </div>
+
+        <table class="meta-table">
+          <tr>
+            <td colspan="2" style="width: 25%">
+              Airport:<br /><input
+                type="text"
+                value="Jaipur International Airport"
+                readonly
+                style="font-weight: bold"
+              />
+            </td>
+            <td colspan="2" style="width: 25%">
+              Unit:<br /><input
+                type="text"
+                value="ACC(P) / OCC"
+                readonly
+                style="font-weight: bold"
+              />
+            </td>
+            <td colspan="2" style="width: 25%">
+              Date:<br /><input type="date" id="checkDate" required />
+            </td>
+            <td colspan="2" style="width: 25%">
+              Period:<br /><input type="text" id="checkPeriod" required />
+            </td>
+          </tr>
+          <tr class="bg-gray">
+            <td colspan="4">Details of Controller</td>
+            <td colspan="4">Details of Examiner</td>
+          </tr>
+          <tr>
+            <td rowspan="2" style="width: 15%; text-align: center">
+              Name & Designation
+            </td>
+            <td rowspan="2" style="width: 10%; text-align: center">
+              Licence<br />No.
+            </td>
+            <td colspan="2" style="width: 25%; text-align: center">Validity</td>
+            <td rowspan="2" style="width: 15%; text-align: center">
+              Name & Designation
+            </td>
+            <td rowspan="2" style="width: 10%; text-align: center">
+              Licence<br />No.
+            </td>
+            <td colspan="2" style="width: 25%; text-align: center">Validity</td>
+          </tr>
+          <tr>
+            <td style="text-align: center">Licence</td>
+            <td style="text-align: center">Medical</td>
+            <td style="text-align: center">Licence</td>
+            <td style="text-align: center">Medical</td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="text"
+                id="cName"
+                class="name-desig-input"
+                list="employeeList"
+                placeholder="Select Name"
+                required
+                autocomplete="off"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                id="cLicence"
+                style="text-align: center; font-weight: bold"
+              />
+            </td>
+            <td><input type="date" id="cLicenceVal" /></td>
+            <td><input type="date" id="cMedicalVal" /></td>
+
+            <td>
+              <input
+                type="text"
+                id="eName"
+                class="name-desig-input"
+                list="employeeList"
+                placeholder="Select Name"
+                required
+                autocomplete="off"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                id="eLicence"
+                style="text-align: center; font-weight: bold"
+              />
+            </td>
+            <td><input type="date" id="eLicenceVal" /></td>
+            <td><input type="date" id="eMedicalVal" /></td>
+          </tr>
+        </table>
+
+        <table class="pi-table">
+          <thead>
+            <tr>
+              <th colspan="2" style="width: 10%">Performance Area</th>
+              <th style="width: 5%">S.N.</th>
+              <th style="width: 55%">Performance Identifier</th>
+              <th colspan="5" style="width: 30%">Grade</th>
+            </tr>
+            <tr class="bg-gray">
+              <th
+                colspan="4"
+                style="
+                  background-color: transparent !important;
+                  border: none;
+                  border-bottom: 1px solid black;
+                "
+              ></th>
+              <th class="grade-col">5</th>
+              <th class="grade-col">4</th>
+              <th class="grade-col">3</th>
+              <th class="grade-col">2</th>
+              <th class="grade-col">1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2" class="vertical-cell">
+                <span class="vertical-text"
+                  >SAFETY<br />PERFORMANCE<br />AREA</span
+                >
+              </td>
+              <td rowspan="2" style="border-right: none; width: 5px"></td>
+              <td class="sn-cell">01</td>
+              <td class="pi-text-cell">
+                Impending conflicting traffic detected and resolved.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi01" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col cell-shaded">
+                <label class="radio-container"
+                  ><input type="radio" name="pi01" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col cell-shaded">
+                <label class="radio-container"
+                  ><input type="radio" name="pi01" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col cell-shaded">
+                <label class="radio-container"
+                  ><input type="radio" name="pi01" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col cell-shaded">
+                <label class="radio-container"
+                  ><input type="radio" name="pi01" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">02</td>
+              <td class="pi-text-cell">
+                The applied separation is appropriate taking into account safety
+                & efficiency.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi02" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi02" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi02" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi02" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi02" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td rowspan="8" class="vertical-cell">
+                <span class="vertical-text">SKILL</span>
+              </td>
+              <td rowspan="3" class="vertical-cell">
+                <span class="vertical-text">Control Procedures</span>
+              </td>
+              <td class="sn-cell">03</td>
+              <td class="pi-text-cell">
+                Established communication promptly with aircraft entering
+                jurisdiction.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi03" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi03" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi03" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi03" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi03" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">04</td>
+              <td class="pi-text-cell">
+                Clearances for arriving and departing aircraft (Including to and
+                from satellite stations) planned for expeditious descent and
+                climb vis-à-vis sequence and/or conflicting traffic to maintain
+                a safe and orderly traffic flow with least average delay.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi04" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi04" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi04" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi04" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi04" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">05</td>
+              <td class="pi-text-cell">
+                Allocated optimal levels to aircraft/ Issued clearance to
+                aircraft without significant delay
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi05" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi05" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi05" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi05" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi05" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td rowspan="3" class="vertical-cell">
+                <span class="vertical-text"
+                  >Phraseologies and<br />communication skills</span
+                >
+              </td>
+              <td class="sn-cell">06</td>
+              <td class="pi-text-cell">
+                Made use of correct phraseologies /Used appropriate
+                pre-formatted messages and used minimum plain language text in
+                CPDLC.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi06" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi06" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi06" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi06" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi06" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">07</td>
+              <td class="pi-text-cell">
+                Instructions were concise and unambiguous
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi07" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi07" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi07" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi07" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi07" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">08</td>
+              <td class="pi-text-cell">
+                Used correct call signs, Read-backs monitored and errors
+                corrected quickly.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi08" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi08" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi08" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi08" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi08" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td rowspan="2" class="vertical-cell">
+                <span class="vertical-text">Coordination<br />Procedures</span>
+              </td>
+              <td class="sn-cell">09</td>
+              <td class="pi-text-cell">
+                Coordination with other ATC units/ATC Centres performed in
+                adherence to SOP/ Local instructions and in English.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi09" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi09" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi09" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi09" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi09" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">10</td>
+              <td class="pi-text-cell">
+                Initiated and accepted transfer of control/communication as per
+                LOAs/SOPs and where applicable, timely responded to AFN logon &
+                established ADS-CPDLC connection promptly with aircraft,
+                forwarded AFN logon to next ATS Unit where applicable.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi10" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi10" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi10" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi10" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi10" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="page-footer">
+          <span>22-June-2023</span>
+          <span>Proficiency Check Proforma-ACC (P)/OCC (rev.3)</span>
+          <span>Page 1 of 4</span>
+        </div>
+      </div>
+
+      <div class="a4-page">
+        <div class="header-top">
+          <div class="header-left">
+            <img
+              src="../assets/logo.png"
+              alt="AAI Logo"
+              onerror="this.style.display = 'none'"
+            />
+            <h1>
+              भारतीय विमानपत्तन प्राधिकरण<br />AIRPORTS AUTHORITY OF INDIA
+            </h1>
+          </div>
+          <div class="header-right">Form: CAP-04/024(Rev.3)</div>
+        </div>
+
+        <table class="pi-table" style="margin-top: 0">
+          <tbody>
+            <tr>
+              <td rowspan="2" class="vertical-cell">
+                <span class="vertical-text" style="padding-top: 10px"
+                  >Use of Automation tools<br />and other resources</span
+                >
+              </td>
+              <td class="sn-cell" style="width: 35px">11</td>
+              <td class="pi-text-cell">
+                Promptly updated data on FDP/FPS/EFS or passed required
+                information to concerned ATC Unit based on position
+                reports/ADS-CPDLC reports as per published procedure.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi11" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi11" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi11" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi11" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi11" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">12</td>
+              <td class="pi-text-cell">
+                Acknowledged and Monitored all alerts/alarms on ADS-CPDLC/any
+                other Automation system and/or by other agencies and took
+                appropriate action.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi12" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi12" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi12" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi12" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi12" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td rowspan="9" class="vertical-cell">
+                <span class="vertical-text"
+                  >ATTRIBUTES<br />(Maintaining attention, situational awareness
+                  and Workload)</span
+                >
+              </td>
+              <td class="sn-cell">13</td>
+              <td class="pi-text-cell">
+                Maintained situational awareness at all times and scanned and
+                managed the FPS/EFS effectively.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi13" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi13" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi13" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi13" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi13" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">14</td>
+              <td class="pi-text-cell">
+                Shifted attention between various aircraft as required and
+                prioritized activities according to situation.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi14" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi14" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi14" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi14" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi14" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">15</td>
+              <td class="pi-text-cell">
+                Stayed calm, focused and handled workload efficiently.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi15" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi15" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi15" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi15" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi15" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">16*</td>
+              <td class="pi-text-cell">
+                Handled unexpected situations effectively.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi16" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi16" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi16" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi16" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi16" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">17*</td>
+              <td class="pi-text-cell">
+                Recognized and responded to deviations from ATC clearances
+                promptly.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi17" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi17" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi17" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi17" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi17" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">18*</td>
+              <td class="pi-text-cell">
+                Took appropriate action upon significant changes in
+                meteorological conditions/ status of equipment /facilities /
+                aerodromes etc.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi18" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi18" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi18" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi18" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi18" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">19</td>
+              <td class="pi-text-cell">
+                Responded to pilot's requests promptly.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi19" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi19" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi19" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi19" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi19" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">20*</td>
+              <td class="pi-text-cell">
+                Exhibited team member attributes and adapted to unusual
+                situation occurring in other unit.
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi20" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi20" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi20" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi20" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi20" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">21*</td>
+              <td class="pi-text-cell">
+                Received and gave complete position relief briefing
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi21" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi21" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi21" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi21" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi21" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td rowspan="4" class="vertical-cell">
+                <span class="vertical-text">KNOWLEDGE</span>
+              </td>
+              <td class="sn-cell">22</td>
+              <td class="pi-text-cell">Application of separation standards</td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi22" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi22" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi22" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi22" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi22" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">23</td>
+              <td class="pi-text-cell">
+                Equipment/Tools/displays available in the unit/working position,
+                knowledge of Airspace /Aerodrome Data/ IAL Procedures / Aircraft
+                Performance and characteristics etc
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi23" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi23" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi23" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi23" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi23" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">24</td>
+              <td class="pi-text-cell">
+                Source of information (Awareness/knowledge of relevant documents
+                such as ICAO Docs, Aerodrome Manual, contingency/emergency plans
+                and procedures, Docs Issued by DGCA/AAI, AIPS, NOTAMs etc.)
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi24" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi24" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi24" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi24" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi24" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="sn-cell">25</td>
+              <td class="pi-text-cell">
+                Unusual Occurrences and contingency procedures
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi25" value="5" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi25" value="4" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi25" value="3" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi25" value="2" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+              <td class="grade-col">
+                <label class="radio-container"
+                  ><input type="radio" name="pi25" value="1" /><span
+                    class="checkmark"
+                    >✓</span
+                  ></label
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="page-footer">
+          <span>22-June-2023</span>
+          <span>Proficiency Check Proforma-ACC (P)/OCC (rev.3)</span>
+          <span>Page 2 of 4</span>
+        </div>
+      </div>
+
+      <div class="a4-page">
+        <div class="header-top">
+          <div class="header-left">
+            <img
+              src="../assets/logo.png"
+              alt="AAI Logo"
+              onerror="this.style.display = 'none'"
+            />
+            <h1>
+              भारतीय विमानपत्तन प्राधिकरण<br />AIRPORTS AUTHORITY OF INDIA
+            </h1>
+          </div>
+          <div class="header-right">Form: CAP-04/024(Rev.3)</div>
+        </div>
+
+        <div style="font-weight: bold; font-size: 10pt; margin-top: 10px">
+          Result :
+        </div>
+
+        <table class="result-table">
+          <tr>
+            <td style="width: 50%">Marks obtained (M)</td>
+            <td>
+              <input
+                type="text"
+                id="outMarks"
+                readonly
+                style="font-weight: bold; text-align: center"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Percentage =
+              <div class="fraction">
+                <span class="top">M x 100</span><span class="bottom">125</span>
+              </div>
+            </td>
+            <td>
+              <input
+                type="text"
+                id="outPercentage"
+                readonly
+                style="font-weight: bold; text-align: center"
+              />
+            </td>
+          </tr>
+        </table>
+
+        <div
+          style="
+            font-weight: bold;
+            font-size: 9.5pt;
+            margin-top: 15px;
+            margin-left: 60px;
+          "
+        >
+          (Minimum pass marks are 80%)
+        </div>
+
+        <div class="checkbox-row">
+          <div>
+            <span class="sq-checkbox" id="chkPass"></span> Demonstrated
+            Proficiency
+          </div>
+          <div>
+            <span class="sq-checkbox" id="chkFail"></span> Did not demonstrate
+            Proficiency
+          </div>
+        </div>
+
+        <div class="remarks-section">
+          Remarks of the Assessor/ Chairman of the Board:
+        </div>
+        <textarea id="txtRemarks" class="lined-area" required></textarea>
+
+        <div class="remarks-section" style="margin-top: 15px">
+          Signatures of Assessor/Board Members:
+        </div>
+
+        <div class="sig-block-container">
+          <div class="sig-box">
+            <div class="sig-line"></div>
+            <div>(SIGNATURE)</div>
+            <div>
+              NAME:
+              <input type="text" class="sig-input-line" style="width: 120px" />
+            </div>
+            <div>
+              DESIGNATION:
+              <input type="text" class="sig-input-line" style="width: 80px" />
+            </div>
+            <div>CHAIRMAN/ASSESSOR**</div>
+          </div>
+          <div class="sig-box">
+            <div class="sig-line"></div>
+            <div>(SIGNATURE)</div>
+            <div>
+              NAME:
+              <input type="text" class="sig-input-line" style="width: 120px" />
+            </div>
+            <div>
+              DESIGNATION:
+              <input type="text" class="sig-input-line" style="width: 80px" />
+            </div>
+            <div>MEMBER-1<sup>#</sup></div>
+          </div>
+          <div class="sig-box">
+            <div class="sig-line"></div>
+            <div>(SIGNATURE)</div>
+            <div>
+              NAME:
+              <input type="text" class="sig-input-line" style="width: 120px" />
+            </div>
+            <div>
+              DESIGNATION:
+              <input type="text" class="sig-input-line" style="width: 80px" />
+            </div>
+            <div>MEMBER-2<sup>#</sup></div>
+          </div>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+          "
+        >
+          <div style="width: 50%; font-size: 9.5pt">
+            <div style="height: 31px"></div>
+            <div>(**: Select “Chairman” in case of board)</div>
+            <div>(#: Required only in case of the board, else strike-out)</div>
+          </div>
+          <div style="width: 40%; font-size: 9.5pt">
+            <div style="font-weight: bold; margin-bottom: 30px">
+              Signatures of Assessee:
+            </div>
+            <div class="sig-line"></div>
+            <div>(SIGNATURE)</div>
+            <div>
+              NAME:
+              <input
+                type="text"
+                id="lblAssesseeName"
+                class="sig-input-line"
+                readonly
+                style="width: 150px; font-weight: bold; color: black"
+              />
+            </div>
+            <div>
+              DESIGNATION:
+              <input type="text" class="sig-input-line" style="width: 110px" />
+            </div>
+          </div>
+        </div>
+
+        <div class="page-footer">
+          <span>22-June-2023</span>
+          <span>Proficiency Check Proforma-ACC (P)/OCC (rev.3)</span>
+          <span>Page 3 of 4</span>
+        </div>
+      </div>
+
+      <div class="a4-page">
+        <div class="header-top">
+          <div class="header-left">
+            <img
+              src="../assets/logo.png"
+              alt="AAI Logo"
+              onerror="this.style.display = 'none'"
+            />
+            <h1>
+              भारतीय विमानपत्तन प्राधिकरण<br />AIRPORTS AUTHORITY OF INDIA
+            </h1>
+          </div>
+          <div class="header-right">Form: CAP-04/024(Rev.3)</div>
+        </div>
+
+        <div
+          style="
+            text-align: center;
+            font-weight: bold;
+            font-size: 10.5pt;
+            margin-top: 5px;
+            margin-bottom: 15px;
+          "
+        >
+          Guidelines and Instructions for filling up the Proficiency Check
+          Proforma
+        </div>
+
+        <div class="guide-text">
+          <ol>
+            <li>
+              Proficiency checks are part of the process of assessing the
+              competence of a rated air traffic controller to provide a safe,
+              orderly and expeditious air traffic control service in the
+              concerned ATC unit, by direct on-the-job observations and oral
+              examinations.
+            </li>
+            <li>
+              The rated air traffic controller undergoing the proficiency check
+              should be made aware, by formal and informal counselling, of the
+              strengths and weaknesses observed during the process of the check.
+            </li>
+            <li>
+              <strong>Grading method:</strong>
+              <ul>
+                <li>
+                  <span class="letter">i)</span> A rated air traffic controller
+                  is assessed in following four Areas of Performance:<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;a) Safety Performance<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;b) Skill<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;c) Attributes (Maintaining attention,
+                  situational awareness and Workload) and<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;d) Knowledge
+                </li>
+                <li>
+                  <span class="letter">ii)</span> Each performance identifier
+                  (PI) is serially numbered and is assessed according to the
+                  grades shown against them.
+                </li>
+                <li>
+                  <span class="letter">iii)</span> Only one grade is to be
+                  ticked (&radic;) against one performance identifier (PI).
+                </li>
+                <li>
+                  <span class="letter">iv)</span> Performance identifiers marked
+                  with asterisk (*) will be "Theoretically Assessed" if not
+                  practically observed during the assessment, and the same will
+                  be graded in respective Performance Identifier field.
+                </li>
+                <li>
+                  <span class="letter">v)</span> Shaded columns under the
+                  "Grades" column are indicative of unacceptable/unsatisfactory
+                  performance in that Performance Identifier.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Description of grades:</strong> The grades indicated
+              against each identifier shall carry the following meaning.<br /><br />
+              5 Performance met requirements at a level appropriate to the
+              privileges at all times.<br />
+              4 Performance met requirements at a level appropriate to the
+              privileges most of the times<br />
+              3 Performance did not meet requirements at a level appropriate to
+              the privileges sometimes and impacted efficiency.<br />
+              2 Performance did not meet requirements at a level appropriate to
+              the privileges sometimes and could have impacted safety.<br />
+              1 Performance did not meet requirements at a level appropriate to
+              the privileges most of the times and has impacted safety.
+            </li>
+            <li>
+              <strong>Marking Scheme</strong>
+              <ul>
+                <li>
+                  <span class="letter">a)</span> Grade 5, 4, 3, 2 & 1 will carry
+                  "5", "4", "3", "2" & "1" marks respectively in the Performance
+                  Identifiers.
+                </li>
+                <li>
+                  <span class="letter">b)</span> Marks obtained in all the
+                  Performance Identifiers shall be added at the end of
+                  assessment and percentage shall be calculated as shown in the
+                  table under section "Result".
+                </li>
+                <li>
+                  <span class="letter">c)</span>
+                  <strong
+                    >Minimum marks to "Demonstrate Proficiency" shall be
+                    80%.</strong
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Result:</strong> The terms used for "Result" in the
+              proficiency check form are defined as follows:
+              <ul>
+                <li>
+                  <span class="letter">a)</span>
+                  <strong>Demonstrated Proficiency:</strong> It indicates that
+                  the applicant shall has demonstrated, at a level appropriate
+                  to the privileges being granted, the skills, judgement and
+                  performance required to provide a safe, orderly and
+                  expeditious control service, including the recognition and
+                  management of threats and errors.
+                </li>
+                <li>
+                  <span class="letter">b)</span>
+                  <strong>Did not demonstrate Proficiency:</strong> It indicates
+                  that the applicant has not demonstrated, at a level
+                  appropriate to the privileges being granted, the skills,
+                  judgement and performance required to provide a safe, orderly
+                  and expeditious control service, including the recognition and
+                  management of threats and errors.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong
+                >Grade less than 5 in the Performance Identifier 01 is an
+                unacceptable performance and the rated air traffic controller
+                will be treated as having failed (i.e. Did not demonstrate
+                Proficiency) in the proficiency check.</strong
+              >
+            </li>
+          </ol>
+        </div>
+
+        <div class="page-footer">
+          <span>22-June-2023</span>
+          <span>Proficiency Check Proforma-ACC (P)/OCC (rev.3)</span>
+          <span>Page 4 of 4</span>
+        </div>
+      </div>
+    </form>
+
+    <script src="../data/roster.js"></script>
+    <script src="../js/calculator.js"></script>
+    <script src="../js/form-core.js"></script>
+  </body>
+</html>
