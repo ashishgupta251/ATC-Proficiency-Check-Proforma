@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 29 - APP(P) Proficiency Check</title>
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/print.css">
+</head>
+<body>
+
+<form id="proficiencyForm">
+
+    <div class="page-container">
+        <div class="form-header">
+            <img src="../assets/logo.png" alt="AAI Logo" class="logo">
+            <h1>भारतीय विमानपत्तन प्राधिकरण<br>AIRPORTS AUTHORITY OF INDIA</h1>
+            <h2>PROFICIENCY CHECK PROFORMA - APPROACH CONTROL PROCEDURAL</h2>
+            <div class="form-meta-right">Form: CAP-04/022 (rev.2)<br>02-November-2022</div>
+        </div>
+
+        <div class="form-grid-2">
+            <div class="input-field">
+                <label>Airport</label>
+                <input type="text" value="Jaipur International Airport" disabled>
+            </div>
+            <div class="input-field">
+                <label>Unit</label>
+                <input type="text" value="APP(P)" disabled>
+            </div>
+        </div>
+
+        <div class="form-grid-2">
+            <div class="input-field">
+                <label>Date *</label>
+                <input type="date" id="checkDate" required>
+            </div>
+            <div class="input-field">
+                <label>Period *</label>
+                <input type="text" id="checkPeriod" placeholder="e.g., 2026-2027" required>
+            </div>
+        </div>
+
+        <div class="form-grid-2">
+            <fieldset>
+                <legend>Details of Controller</legend>
+                <div class="input-field">
+                    <label>Name & Designation *</label>
+                    <input type="text" id="cName" required>
+                </div>
+                <div class="input-field">
+                    <label>Licence No.</label>
+                    <input type="text" id="cLicence">
+                </div>
+                <div class="input-field">
+                    <label>Licence Validity</label>
+                    <input type="date" id="cLicenceVal">
+                </div>
+                <div class="input-field">
+                    <label>Medical Validity</label>
+                    <input type="date" id="cMedicalVal">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Details of Examiner</legend>
+                <div class="input-field">
+                    <label>Name & Designation *</label>
+                    <input type="text" id="eName" required>
+                </div>
+                <div class="input-field">
+                    <label>Licence No.</label>
+                    <input type="text" id="eLicence">
+                </div>
+                <div class="input-field">
+                    <label>Licence Validity</label>
+                    <input type="date" id="eLicenceVal">
+                </div>
+                <div class="input-field">
+                    <label>Medical Validity</label>
+                    <input type="date" id="eMedicalVal">
+                </div>
+            </fieldset>
+        </div>
+
+        <table class="pi-table">
+            <thead>
+                <tr>
+                    <th style="width: 6%;">S.N.</th>
+                    <th style="width: 64%;">Performance Identifier</th>
+                    <th style="width: 6%;">5</th>
+                    <th style="width: 6%;">4</th>
+                    <th style="width: 6%;">3</th>
+                    <th style="width: 6%;">2</th>
+                    <th style="width: 6%;">1</th>
+                </tr>
+            </thead>
+            <tbody id="piTableBodyPage1">
+                </tbody>
+        </table>
+        <div class="page-footer-text">Proficiency Check Proforma-APP (P) (rev.2) Page 1 of 4</div>
+    </div>
+
+
+    <div class="page-container">
+        <div class="form-header" style="border-bottom: 1px solid #aaa; padding-bottom: 5px; margin-bottom: 15px;">
+            <h2 style="font-size: 11px; text-align: left;">Proficiency Check Proforma - APP (P) (rev.2)</h2>
+            <div class="form-meta-right" style="font-size: 10px;">Form: CAP-04/022</div>
+        </div>
+
+        <table class="pi-table">
+            <thead>
+                <tr>
+                    <th style="width: 6%;">S.N.</th>
+                    <th style="width: 64%;">Performance Identifier</th>
+                    <th style="width: 6%;">5</th>
+                    <th style="width: 6%;">4</th>
+                    <th style="width: 6%;">3</th>
+                    <th style="width: 6%;">2</th>
+                    <th style="width: 6%;">1</th>
+                </tr>
+            </thead>
+            <tbody id="piTableBodyPage2">
+                </tbody>
+        </table>
+        <div class="page-footer-text">Proficiency Check Proforma-APP (P) (rev.2) Page 2 of 4</div>
+    </div>
+
+
+    <div class="page-container">
+        <div class="form-header">
+            <h1>भारतीय विमानपत्तन प्राधिकरण<br>AIRPORTS AUTHORITY OF INDIA</h1>
+            <h2>RESULT & ASSESSMENT RECORD</h2>
+            <div class="form-meta-right">Form: CAP-04/022</div>
+        </div>
+
+        <div class="result-section">
+            <h3>Result:</h3>
+            <div class="result-row">Marks Obtained (M): <span id="outMarks" style="font-weight:bold; border-bottom:1px solid #333; padding:0 15px;">0</span></div>
+            <div class="result-row" style="margin-top:15px; margin-bottom:15px;">
+                Percentage Calculation: <span style="font-weight:bold; font-size:14px;">Percentage = (M &times; 100) / 125 = </span>
+                <span id="outPercentage" style="font-weight:bold; font-size:15px; color:#003366; background:#fff; padding:2px 10px; border:1px solid #ccc;">0%</span>
+            </div>
+            <div class="result-row" style="color:#555; font-size:11px; margin-bottom:15px;">(Minimum pass marks are 80% subject to Critical PI 01 criteria)</div>
+            
+            <div class="result-row" style="margin-top:20px;">
+                <span id="chkPassSymbol" class="unicode-chk">&#9744;</span> Demonstrated Proficiency
+            </div>
+            <div class="result-row">
+                <span id="chkFailSymbol" class="unicode-chk">&#9744;</span> Did not demonstrate Proficiency
+            </div>
+        </div>
+
+        <div class="input-field" style="margin-top:20px;">
+            <label>Remarks of the Assessor / Chairman of the Board *</label>
+            <textarea id="txtRemarks" class="remarks-area" placeholder="Enter continuous assessment logs or descriptive board remarks here..." required></textarea>
+        </div>
+
+        <h3 style="font-size:12px; margin-top:25px; color:#003366; text-transform:uppercase;">Signatures of Assessor / Board Members</h3>
+        <div class="form-grid-2" style="margin-top:10px;">
+            <div>
+                <div class="input-field"><input type="text" placeholder="CHAIRMAN / ASSESSOR Name"></div>
+                <div class="sig-box">Signatures of Assessor/Board Chairman</div>
+            </div>
+            <div>
+                <div class="input-field"><input type="text" placeholder="MEMBER 1 Name (Board Option)"></div>
+                <div class="sig-box">Signature of Board Member 1</div>
+            </div>
+        </div>
+        <div class="form-grid-2" style="margin-top:20px;">
+            <div>
+                <div class="input-field"><input type="text" placeholder="MEMBER 2 Name (Board Option)"></div>
+                <div class="sig-box">Signature of Board Member 2</div>
+            </div>
+            <div>
+                <div class="input-field"><input type="text" id="lblAssesseeName" placeholder="Assessee Controller Name" readonly style="background:#eee;"></div>
+                <div class="sig-box">Signature of Assessee</div>
+            </div>
+        </div>
+
+        <div class="page-footer-text">Proficiency Check Proforma-APP (P) (rev.2) Page 3 of 4</div>
+    </div>
+
+
+    <div class="page-container">
+        <div class="form-header">
+            <h1>भारतीय विमानपत्तन प्राधिकरण<br>AIRPORTS AUTHORITY OF INDIA</h1>
+            <h2>GUIDELINES AND INSTRUCTIONS FOR FILLING THE PROFORMA</h2>
+        </div>
+
+        <div class="guidelines-content">
+            <ol>
+                <li>Proficiency checks are part of the process of assessing the competence of a rated air traffic controller to provide a safe, orderly and expeditious air traffic control service in the concerned ATC unit, by direct on-the-job observations and oral examinations.</li>
+                <li>The rated air traffic controller undergoing the proficiency check should be made aware, by formal and informal counselling, of the strengths and weaknesses observed during the process of the check.</li>
+                <li><strong>Grading method:</strong>
+                    <ul>
+                        <li>A rated air traffic controller is assessed in following four Areas of Performance:<br>a) Safety Performance &nbsp;&nbsp;&nbsp; b) Skill &nbsp;&nbsp;&nbsp; c) Attributes &nbsp;&nbsp;&nbsp; d) Knowledge</li>
+                        <li>Each performance identifier (PI) is serially numbered and is assessed according to the grades shown against them. Only one grade is to be ticked (&radic;) against one performance identifier (PI).</li>
+                        <li>Performance identifiers marked with asterisk (*) will be "Theoretically Assessed" if not practically observed during the assessment, and the same will be graded in respective Performance Identifier field.</li>
+                    </ul>
+                </li>
+                <li><strong>Description of grades:</strong>
+                    <ul>
+                        <li><strong>Grade 5:</strong> Performance met requirements at a level appropriate to the privileges at all times.</li>
+                        <li><strong>Grade 4:</strong> Performance met requirements at a level appropriate to the privileges most of the times.</li>
+                        <li><strong>Grade 3:</strong> Performance did not meet requirements sometimes and impacted efficiency.</li>
+                        <li><strong>Grade 2:</strong> Performance did not meet requirements sometimes and could have impacted safety.</li>
+                        <li><strong>Grade 1:</strong> Performance did not meet requirements most of the times and has impacted safety.</li>
+                    </ul>
+                </li>
+                <li><strong>Marking Scheme:</strong>
+                    <ul>
+                        <li>Grade 5, 4, 3, 2 & 1 will carry "5", "4", "3", "2" & "1" marks respectively in the Performance Identifiers.</li>
+                        <li>Marks obtained in all the Performance Identifiers shall be added at the end of assessment and percentage shall be calculated as shown in the table under section "Result".</li>
+                        <li>Minimum marks to "Demonstrate Proficiency" shall be 80%.</li>
+                    </ul>
+                </li>
+                <li><strong>CRITICAL FAIL CRITERIA (Point 7):</strong> Grade less than 5 in the Performance Identifier 01 is an unacceptable performance and the rated air traffic controller will be treated as having failed (i.e. Did not demonstrate Proficiency) in the proficiency check.</li>
+            </ol>
+        </div>
+        <div class="page-footer-text">Proficiency Check Proforma-APP (P) (rev.2) Page 4 of 4</div>
+    </div>
+
+    <div class="action-bar">
+        <button type="button" id="btnRunCalc" class="btn btn-calc">Run Calculations</button>
+        <button type="submit" class="btn btn-submit">Submit & Save PDF</button>
+    </div>
+
+</form>
+
+<script>
+    const appp_pis = [
+        "Impending conflicting traffic, and infringement of SUAs detected and resolved.",
+        "The applied separation is appropriate taking into account safety & efficiency.",
+        "Traffic planned in an appropriate manner with least average delay taking into account SOPs, traffic situation, runway in use, destination aerodrome/route and performance characteristics.",
+        "Clearances for arriving and departing aircraft planned for expeditious descent and climb vis-à-vis conflicting traffic to maintain a safe and orderly traffic flow with least average delay.",
+        "Provided traffic information to aircraft correctly and efficiently, where necessary.",
+        "Made use of correct phraseologies",
+        "Instructions were concise and unambiguous and used correct rate of speech and radiotelephony technique",
+        "Used correct call signs, Read-backs monitored and errors corrected quickly",
+        "Coordination with other ATC units/agencies performed effectively and in English",
+        "Initiated and accepted transfer of control/communication as per LOAS/SOPS",
+        "Promptly updated data on FDP/FPS/EFS and passed required information to concerned ATC Unit as per published procedure.",
+        "Acknowledged and Monitored all alerts/alarms on Automation system and/or by other agencies and took appropriate action.",
+        "Maintained situational awareness at all times and scanned and managed the FPS/ EFS effectively.",
+        "Shifted attention between various aircraft as required and prioritized activities according to situation.",
+        "Stayed calm, focused and handled workload efficiently.",
+        "Handled unexpected situations effectively (*)",
+        "Recognized and responded to deviations from ATC clearances promptly. (*)",
+        "Took appropriate action upon significant changes in meteorological conditions/ essential information. (*)",
+        "Responded to pilot's requests promptly",
+        "Exhibited team member attributes and adapted to unusual situation occurring in other unit. (*)",
+        "Received and gave complete position relief briefing (*)",
+        "Application of Separation Standards",
+        "Equipment/Tools/displays available in the unit/working position, knowledge of Airspace / Aerodrome Data/ IAL Procedures / VFR & SVFR / Aircraft Performance and characteristics",
+        "Source of information (Awareness / knowledge of relevant documents such as ICAO Docs, Aerodrome Manual, contingency/emergency plans and procedures, Docs Issued by DGCA/AAI, AIPs, NOTAMs etc.)",
+        "Unusual Occurrences and contingency procedures"
+    ];
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const tbodyPage1 = document.getElementById('piTableBodyPage1');
+        const tbodyPage2 = document.getElementById('piTableBodyPage2');
+
+        appp_pis.forEach((desc, index) => {
+            const sn = String(index + 1).padStart(2, '0');
+            const isCritical = index === 0;
+            
+            const row = document.createElement('tr');
+            if(isCritical) row.className = 'critical-row';
+            
+            row.innerHTML = `
+                <td class="center">${sn}</td>
+                <td>${desc} ${isCritical ? '<br><span class="critical-badge">(CRITICAL - FAIL IF < 5)</span>' : ''}</td>
+                <td class="center"><input type="radio" name="pi${sn}" value="5" required></td>
+                <td class="center"><input type="radio" name="pi${sn}" value="4"></td>
+                <td class="center"><input type="radio" name="pi${sn}" value="3"></td>
+                <td class="center"><input type="radio" name="pi${sn}" value="2"></td>
+                <td class="center"><input type="radio" name="pi${sn}" value="1"></td>
+            `;
+            
+            // PI 1 to 10 on Page 1, PI 11 to 25 on Page 2
+            if (index < 10) {
+                tbodyPage1.appendChild(row);
+            } else {
+                tbodyPage2.appendChild(row);
+            }
+        });
+    });
+</script>
+<script src="../js/calculator.js"></script>
+
+</body>
+</html>
