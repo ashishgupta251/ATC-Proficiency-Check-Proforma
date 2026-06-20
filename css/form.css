@@ -1,0 +1,254 @@
+/* css/form.css */
+:root {
+    --primary-color: #003366;
+    --text-color: #333333;
+    --border-color: #aaaaaa;
+    --bg-light: #f4f6f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+/* Base structural wrapper for pages */
+.page-container {
+    background: #ffffff;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto 30px auto;
+    padding: 20mm;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Header Styling */
+.form-header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.form-header .logo {
+    width: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.form-header h1 {
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.form-header h2 {
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-meta-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 11px;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Grid Forms Layout */
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 5px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.input-field label {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.input-field input, .input-field select {
+    padding: 6px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.input-field input:disabled {
+    background-color: #eeeeee;
+    color: #333;
+    font-weight: bold;
+    border: 1px solid #bbbbbb;
+}
+
+/* Evaluation Table CSS */
+table.pi-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 11px;
+}
+
+table.pi-table th, table.pi-table td {
+    border: 1px solid var(--border-color);
+    padding: 6px;
+    vertical-align: middle;
+}
+
+table.pi-table th {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+table.pi-table td.center {
+    text-align: center;
+}
+
+.critical-row {
+    background-color: #fff0f0;
+}
+
+.critical-badge {
+    color: red;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+/* Dashboard & Results */
+.result-section {
+    background: #eef4fa;
+    border: 2px solid var(--primary-color);
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.result-section h3 {
+    font-size: 14px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.result-row {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.unicode-chk {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: default;
+    user-select: none;
+}
+
+textarea.remarks-area {
+    width: 100%;
+    height: 70px;
+    padding: 8px;
+    font-size: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    resize: none;
+}
+
+/* Signatures */
+.sig-box {
+    border-top: 1px dashed #666;
+    margin-top: 35px;
+    text-align: center;
+    font-size: 11px;
+    padding-top: 5px;
+}
+
+/* Guidelines Text Style */
+.guidelines-content {
+    font-size: 11px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.guidelines-content h3 {
+    font-size: 13px;
+    color: var(--primary-color);
+    margin: 10px 0 5px 0;
+}
+
+.guidelines-content ol, .guidelines-content ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Action Buttons Bottom Fixed */
+.action-bar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255,255,255,0.9);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btn-calc { background: #0066cc; color: white; }
+.btn-submit { background: var(--primary-color); color: white; }
+
+.page-footer-text {
+    position: absolute;
+    bottom: 15mm;
+    left: 20mm;
+    right: 20mm;
+    text-align: center;
+    font-size: 10px;
+    color: #666;
+    border-top: 1px solid #ddd;
+    padding-top: 5px;
+}
