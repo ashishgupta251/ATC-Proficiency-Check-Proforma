@@ -78,12 +78,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("proficiencyForm");
   const savePdfBtn = document.getElementById("globalSavePdfBtn");
 
-  if (savePdfBtn) {
+  if (savePdfBtn && form) {
     savePdfBtn.addEventListener("click", function () {
-      if (form)
-        form.dispatchEvent(
-          new Event("submit", { cancelable: true, bubbles: true }),
-        );
+      if (!form.reportValidity()) {
+        return;
+      }
+
+      form.dispatchEvent(
+        new Event("submit", { cancelable: true, bubbles: true }),
+      );
     });
   }
 
@@ -91,26 +94,56 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      let missingPIs = [];
-      const radioGroups = new Set();
+      document
+        .querySelectorAll('.radio-container input[type="radio"]')
+        .forEach((r) => r.setCustomValidity(""));
 
+      const radioGroups = new Set();
       document
         .querySelectorAll('.radio-container input[type="radio"]')
         .forEach((r) => radioGroups.add(r.name));
       const sortedGroups = Array.from(radioGroups).sort();
 
-      sortedGroups.forEach((name) => {
-        if (!document.querySelector(`input[name="${name}"]:checked`)) {
-          missingPIs.push(name.replace("pi", ""));
-        }
-      });
+      let missingGroup = null;
 
-      if (missingPIs.length > 0) {
-        alert(
-          `Error! Form poora nahi bhara hai.\nKripya in Performance Identifiers (PI) me grade de:\n👉 PI No: ${missingPIs.join(", ")}`,
+      for (let name of sortedGroups) {
+        if (!document.querySelector(`input[name="${name}"]:checked`)) {
+          missingGroup = name;
+          break;
+        }
+      }
+
+      if (missingGroup) {
+        const radios = document.querySelectorAll(
+          `input[name="${missingGroup}"]`,
         );
+        const firstRadio = radios[0];
+
+        firstRadio.setCustomValidity(
+          "Please select a grade for this identifier.",
+        );
+        firstRadio.reportValidity();
+
+        const row = firstRadio.closest("tr");
+        if (row) {
+          const originalBg = row.style.backgroundColor;
+          row.style.backgroundColor = "#ffe6e6";
+          row.style.transition = "background-color 0.3s";
+
+          radios.forEach((r) => {
+            r.addEventListener(
+              "change",
+              function () {
+                firstRadio.setCustomValidity("");
+                row.style.backgroundColor = originalBg;
+              },
+              { once: true },
+            );
+          });
+        }
         return false;
       }
+
       setTimeout(() => window.print(), 300);
     });
   }
