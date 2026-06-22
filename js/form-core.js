@@ -1,7 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const user = JSON.parse(sessionStorage.getItem("user")) || {
-    name: "Controller",
-  };
+  
+  // --- NAYA STRICT LOGIN CHECK ---
+  const user = JSON.parse(sessionStorage.getItem("user"));
+  
+  // Agar user logged in nahi hai, toh seedha index.html (Login page) par bhej do
+  if (!user) {
+    window.location.href = "../index.html";
+    return; // Code ko yahin rok do taaki form load hi na ho
+  }
+  // -------------------------------
 
   const navbarHTML = `
         <div class="common-navbar no-print">
@@ -21,6 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
   document.body.insertAdjacentHTML("afterbegin", navbarHTML);
 
+  // ... (Baaki ki file ka aage ka pura code waise ka waisa hi rahega jaise pichli baar diya tha)
+
+  // UTC Clock Logic
   function updateUTC() {
     const now = new Date();
     const utcTime = now.toISOString().substring(11, 19);
@@ -30,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(updateUTC, 1000);
   updateUTC();
 
+  // Logout Logic
   const logoutBtn = document.getElementById("globalLogoutBtn");
   if (logoutBtn) {
     logoutBtn.addEventListener("click", function () {
@@ -38,62 +49,75 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Populate Datalist using the new Array Structure
   const dataList = document.getElementById("employeeList");
   if (dataList && typeof EMPLOYEE_ROSTER !== "undefined") {
-    for (const name of Object.keys(EMPLOYEE_ROSTER)) {
+    EMPLOYEE_ROSTER.forEach((emp) => {
       let option = document.createElement("option");
-      option.value = name;
+      option.value = emp.display;
       dataList.appendChild(option);
-    }
+    });
   }
 
+  // Updated Autofill Logic
   function setupAutoFill(inputId, licenceId) {
     const inputEl = document.getElementById(inputId);
     const licenceEl = document.getElementById(licenceId);
 
     if (inputEl && licenceEl) {
       inputEl.addEventListener("input", function () {
-        const selectedName = this.value;
-        if (
-          typeof EMPLOYEE_ROSTER !== "undefined" &&
-          EMPLOYEE_ROSTER[selectedName]
-        ) {
-          const licNo = EMPLOYEE_ROSTER[selectedName];
-          licenceEl.value = licNo === "NA" || licNo === "N/A" ? "NA" : licNo;
-        } else {
-          licenceEl.value = "";
+        const selectedValue = this.value;
+
+        if (typeof EMPLOYEE_ROSTER !== "undefined") {
+          // Find the selected employee in the new array structure
+          const matchedEmp = EMPLOYEE_ROSTER.find(
+            (emp) => emp.display === selectedValue
+          );
+
+          if (matchedEmp) {
+            licenceEl.value =
+              matchedEmp.licence === "NA" || matchedEmp.licence === "N/A"
+                ? "NA"
+                : matchedEmp.licence;
+          } else {
+            licenceEl.value = "";
+          }
         }
 
+        // Clean name for Assessee signature block
         if (inputId === "cName") {
-          let cleanName = selectedName.split(" (")[0];
+          let cleanName = selectedValue.split(" (")[0];
           const sigLabel = document.getElementById("lblAssesseeName");
-          if (sigLabel) sigLabel.value = cleanName || selectedName;
+          if (sigLabel) sigLabel.value = cleanName || selectedValue;
         }
       });
     }
   }
+
   setupAutoFill("cName", "cLicence");
   setupAutoFill("eName", "eLicence");
 
   const form = document.getElementById("proficiencyForm");
   const savePdfBtn = document.getElementById("globalSavePdfBtn");
 
+  // Trigger form validation on Save PDF button click
   if (savePdfBtn && form) {
     savePdfBtn.addEventListener("click", function () {
       if (!form.reportValidity()) {
         return;
       }
-
       form.dispatchEvent(
-        new Event("submit", { cancelable: true, bubbles: true }),
+        new Event("submit", { cancelable: true, bubbles: true })
       );
     });
   }
 
+  // Validation and Print Logic
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
+      // Reset custom validation
       document
         .querySelectorAll('.radio-container input[type="radio"]')
         .forEach((r) => r.setCustomValidity(""));
@@ -106,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       let missingGroup = null;
 
+      // Check if any radio group is completely unchecked
       for (let name of sortedGroups) {
         if (!document.querySelector(`input[name="${name}"]:checked`)) {
           missingGroup = name;
@@ -113,21 +138,22 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
+      // Handle Validation Failure
       if (missingGroup) {
         const radios = document.querySelectorAll(
-          `input[name="${missingGroup}"]`,
+          `input[name="${missingGroup}"]`
         );
         const firstRadio = radios[0];
 
         firstRadio.setCustomValidity(
-          "Please select a grade for this identifier.",
+          "Please select a grade for this identifier."
         );
         firstRadio.reportValidity();
 
         const row = firstRadio.closest("tr");
         if (row) {
           const originalBg = row.style.backgroundColor;
-          row.style.backgroundColor = "#ffe6e6";
+          row.style.backgroundColor = "#ffe6e6"; // Highlight missing row in red
           row.style.transition = "background-color 0.3s";
 
           radios.forEach((r) => {
@@ -137,14 +163,24 @@ document.addEventListener("DOMContentLoaded", function () {
                 firstRadio.setCustomValidity("");
                 row.style.backgroundColor = originalBg;
               },
-              { once: true },
+              { once: true }
             );
           });
         }
         return false;
       }
 
-      setTimeout(() => window.print(), 300);
+      // Handle Validation Success & Provide Print Notification UX
+      const originalBtnHtml = savePdfBtn.innerHTML;
+      savePdfBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Generating PDF...';
+      savePdfBtn.style.pointerEvents = "none";
+
+      setTimeout(() => {
+        window.print();
+        // Reset button after print dialog opens
+        savePdfBtn.innerHTML = originalBtnHtml;
+        savePdfBtn.style.pointerEvents = "auto";
+      }, 500); // Small delay to let the UI update the loading state
     });
   }
 });
