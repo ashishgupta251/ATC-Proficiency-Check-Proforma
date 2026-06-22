@@ -20,7 +20,7 @@
     <div class="container">
       <div class="header">
         <img
-          src="assets/bglogo.png"
+          src="assets/logo.png"
           alt="AAI Logo"
           class="logo"
           onerror="this.src = 'assets/logo.png'"
@@ -241,8 +241,13 @@
       document
         .getElementById("searchBar")
         .addEventListener("input", function (e) {
-          const query = e.target.value.toLowerCase();
+          const query = e.target.value.toLowerCase().trim();
           const cards = document.querySelectorAll(".form-card");
+
+          if (query === "") {
+            cards.forEach((card) => (card.style.display = "flex"));
+            return;
+          }
 
           cards.forEach((card) => {
             const textContent = card.innerText.toLowerCase();
