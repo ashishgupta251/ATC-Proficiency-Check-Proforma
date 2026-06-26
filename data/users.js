@@ -1,0 +1,92 @@
+const USERS = [
+  {
+    id: "00707",
+    password: "12345",
+    role: "user",
+    name: "MUKESH CHOUHAN",
+  },
+  {
+    id: "00710",
+    password: "12345",
+    role: "user",
+    name: "SANJAY KUMAR GUPTA",
+  },
+  {
+    id: "01352",
+    password: "12345",
+    role: "user",
+    name: "SUGAR SINGH MEENA",
+  },
+  {
+    id: "00715",
+    password: "12345",
+    role: "user",
+    name: "YOGESH KUMAR JAIN",
+  },
+  {
+    id: "00716",
+    password: "12345",
+    role: "user",
+    name: "RAJESH KUMAR",
+  },
+  {
+    id: "00668",
+    password: "12345",
+    role: "user",
+    name: "SHAILNDRA SINGH ASAWAT",
+  },
+  {
+    id: "00718",
+    password: "12345",
+    role: "user",
+    name: "RAGHUNATH SINGH",
+  },
+  {
+    id: "00719",
+    password: "12345",
+    role: "user",
+    name: "AMIT SRIVASTAVA",
+  },
+  {
+    id: "001",
+    password: "12345",
+    role: "user",
+    name: "Controller 9",
+  },
+  {
+    id: "ATCO010",
+    password: "12345",
+    role: "user",
+    name: "Controller 10",
+  },
+  {
+    id: "ATCO011",
+    password: "12345",
+    role: "user",
+    name: "Controller 11",
+  },
+  {
+    id: "ATCO012",
+    password: "12345",
+    role: "user",
+    name: "Controller 12",
+  },
+  {
+    id: "ATCO013",
+    password: "12345",
+    role: "user",
+    name: "Controller 13",
+  },
+  {
+    id: "ATCO014",
+    password: "12345",
+    role: "user",
+    name: "Controller 14",
+  },
+  {
+    id: "ATCO015",
+    password: "12345",
+    role: "user",
+    name: "Controller 15",
+  },
+];
